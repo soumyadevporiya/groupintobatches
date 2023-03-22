@@ -1,0 +1,14 @@
+flask
+pint
+kubernetes
+bs4
+kafka-python
+google-cloud-storage
+google-auth
+numpy==1.22.4
+apache-beam[gcp]==2.44.0
+functions-framework==3.*
+db-dtypes
+fsspec
+gcsfs
+bigquery

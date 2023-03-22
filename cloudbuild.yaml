@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/mimetic-parity-378803/group_into_batches:latest','.']
+    id: 'build-image-myapp'
+    waitFor: ['-']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push','gcr.io/mimetic-parity-378803/group_into_batches:latest']
+    id: 'push-image-to-container-registry'
+    waitFor: ['build-image-myapp']
+options:
+  logging: CLOUD_LOGGING_ONLY
+images:
+- 'gcr.io/mimetic-parity-378803/group_into_batches:latest'

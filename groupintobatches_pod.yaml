@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: group-into-batches
+spec:
+  restartPolicy: Never
+  containers:
+  - name: group-into-batches-container
+    image: gcr.io/mimetic-parity-378803/group_into_batches:latest
